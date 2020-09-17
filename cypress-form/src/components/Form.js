@@ -27,6 +27,7 @@ function FriendForm(props) {
           placeholder="Enter your name here"
           onChange={onChange}
           value={values.name}
+          data-cy="name"
         />
         <div className="error">{errors.name}</div>
       </FormGroup>
@@ -39,6 +40,7 @@ function FriendForm(props) {
           placeholder="Enter your email here"
           onChange={onChange}
           value={values.email}
+          data-cy="email"
         />
         <div className="error">{errors.email}</div>
       </FormGroup>
@@ -51,6 +53,7 @@ function FriendForm(props) {
           placeholder="Enter your password"
           onChange={onChange}
           value={values.password}
+          data-cy="password"
         />
         <div className="error">{errors.password}</div>
       </FormGroup>
@@ -67,7 +70,7 @@ function FriendForm(props) {
         </Label>
       </FormGroup>
       {/* 🔥 DISABLE THE BUTTON */}
-      <Button color="primary" disabled={disabled}>Submit</Button>
+      <Button color="primary" disabled={disabled} data-cy="submit">Submit</Button>
     </Form>
   );
 }
